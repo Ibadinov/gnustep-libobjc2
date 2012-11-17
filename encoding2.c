@@ -533,6 +533,20 @@ void objc_layout_structure_get_info (struct objc_struct_layout *layout,
 	*offset = (unsigned int)off;
 }
 
+void objc_layout_finish_structure (struct objc_struct_layout *layout,
+                                   unsigned int *size,
+                                   unsigned int *align)
+{
+    if (size)
+    {
+        // todo: guess what?
+    }
+    if (align)
+    {
+        // todo: --//--
+    }
+}
+
 #ifdef ENCODING_TESTS
 
 #define TEST(type) do {\

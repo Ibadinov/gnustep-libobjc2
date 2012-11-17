@@ -58,6 +58,10 @@ void objc_layout_structure_get_info (struct objc_struct_layout *layout,
                                      unsigned int *align,
                                      const char **type);
 
+void objc_layout_finish_structure (struct objc_struct_layout *layout,
+                                   unsigned int *size,
+                                   unsigned int *align);
+
 #define _F_CONST       0x01
 #define _F_IN          0x01
 #define _F_OUT         0x02
