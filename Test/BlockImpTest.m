@@ -1,5 +1,5 @@
-#include <objc/runtime.h>
-#include <objc/blocks_runtime.h>
+#include "../objc/runtime.h"
+#include "../objc/blocks_runtime.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,6 +9,11 @@ struct big
 	int a, b, c, d, e;
 };
 
+#ifdef __has_attribute
+#if __has_attribute(objc_root_class)
+__attribute__((objc_root_class))
+#endif
+#endif
 @interface Foo @end
 @implementation Foo @end
 @interface Foo (Dynamic)
